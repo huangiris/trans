@@ -1,0 +1,390 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"di",
+				"dict_map"
+			],
+			[
+				"fi",
+				"file_name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "io/file_reducer.py",
+			"settings":
+			{
+				"buffer_size": 2306,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 1292,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "conf/config.py",
+			"settings":
+			{
+				"buffer_size": 875,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/huangiris/WBworkplace/transpy-master",
+		"/Users/huangiris/WBworkplace/transpy-master/conf",
+		"/Users/huangiris/WBworkplace/transpy-master/filter",
+		"/Users/huangiris/WBworkplace/transpy-master/io",
+		"/Users/huangiris/WBworkplace/transpy-master/utils"
+	],
+	"file_history":
+	[
+		"/Users/huangiris/trans_output/lang-output.json",
+		"/Users/huangiris/WBworkplace/transpy-master/io/file_resolver.py",
+		"/Users/huangiris/WBworkplace/transpy-master/conf/config.py",
+		"/Users/huangiris/trans_output/addchangeform.jsx-444571360fc83263d639607c9cb2c8b7-output.json",
+		"/Users/huangiris/trans_output/frontlayout.js-c373085032ff28ddc65ed1aa6cd2022b-output.json",
+		"/Users/huangiris/WBworkplace/transpy-master/utils/md5.py",
+		"/Users/huangiris/WBworkplace/transpy-master/io/file_traverse.py",
+		"/Users/huangiris/trans_output/bizchangeformdetail.jsx-de645177ec6b9925b484ffe50bc38a60-output.json",
+		"/Users/huangiris/WBworkplace/transpy-master/utils/__init__.py",
+		"/Users/huangiris/WBworkplace/transpy-master/main.py",
+		"/Users/huangiris/WBworkplace/transpy-master/io/file_reducer.py",
+		"/Users/huangiris/WBworkplace/transpy-master/filter/suffix_filter.py",
+		"/Users/huangiris/WBworkplace/transpy-master/filter/filter.py",
+		"/Users/huangiris/WBworkplace/transpy-master/io/__init__.py",
+		"/Users/huangiris/WBworkplace/transpy-master/filter/__init__.py",
+		"/Users/huangiris/WBworkplace/transpy-master/conf/__init__.py",
+		"/Users/huangiris/trans_output/bizchangeformlist.jsx-e8a3b45e33d52ce6bd3636706aafcded-output.json",
+		"/Users/huangiris/trans_output/businesstotal.jsx-892471d1609e03e9598a7631383e5ca2-output.json",
+		"/Users/huangiris/trans_output/rulemanage.jsx-8565b104e2800bed381c395f6038150b-output.json",
+		"/Users/huangiris/trans_output/demandlist.jsx-2b6dce1ae72c0798c7bd19dce9b754e4-output.json",
+		"/Users/huangiris/trans_output/demand.jsx-810296b1b88b0bdbd19fb9af6b310a38-output.json",
+		"/Users/huangiris/trans_output/productpanorama.jsx-19975e29659f24f45b089983d17e7fee-output.json",
+		"/Users/huangiris/trans_output/abilityprocess.js-4d3c221f9650cd656d2d8cc0f2c21525-output.json",
+		"/Users/huangiris/trans_output/businessdemand.js-b3f2755d656a7156219329b64666e01b-output.json",
+		"/Users/huangiris/trans_output/applistedit.jsx-733241f7602d9aaaadd2d2f4f14c667e-output.json",
+		"/Users/huangiris/trans_output/tair2.js-3d56424beb319b913f39d91e380c9417-output.json",
+		"/Users/huangiris/trans_output/platformability.jsx-9c6ee897298ccdc41d3939084ed65012-output.json",
+		"/Users/huangiris/trans_output/table.jsx-df0ce70c1d98c1b116ef8ec10d903fe1-output.json",
+		"/Users/huangiris/trans_output/activitysort.js-a372140e31ad46a75eff9db753f6f88e-output.json",
+		"/Users/huangiris/trans_output/servicesection.js-cab751a00d4097dd6783292d59c53994-output.json",
+		"/Users/huangiris/trans_output/abilityprocess.jsx-6d4c74c84f51a3b9739103386e81811d-output.json",
+		"/Users/huangiris/trans_output/activitynav.js-4d99aa175405cb45678304c801f3dad7-output.json",
+		"/Users/huangiris/trans_output/appedit.js-d7f7fec6086b813a9704ee90b920fa42-output.json",
+		"/Users/huangiris/trans_output/approvalmodel.js-d98efd2e492579e077533c8f7b08147f-output.json",
+		"/Users/huangiris/trans_output/autopublishpushdata.js-65fac1a8caeffeaa9f2493d2ea43340e-output.json",
+		"/Users/huangiris/trans_output/base.js-6c9bd1dd51dd06def22b60fc26a23c88-output.json",
+		"/Users/huangiris/trans_output/autopublishmerge.js-4deb80de8c401ba58b0a608187496fdb-output.json",
+		"/Users/huangiris/trans_output/autopublishenv.js-fc76449deaddfcd3be375a9dd3d30c2b-output.json",
+		"/Users/huangiris/trans_output/demandextssummary.js-0d2cdeebb9a04c252933d3dfbb3524ae-output.json",
+		"/Users/huangiris/trans_output/publishcontent.js-3b5f79909f1f95c1a11e138284cf7d48-output.json",
+		"/Users/huangiris/trans_output/tree.js-7c33c41a3e26059d8bf8348740be2801-output.json",
+		"/Users/huangiris/WBworkplace/transpy-master/Readme.md",
+		"/Users/huangiris/trans_output/bizability.js-9ad6c32900b8708eb32ac8c8e51b6866-output.json",
+		"/Users/huangiris/trans_output/autopublishrecord.js-79abef449c06788322844bc010943664-output.json",
+		"/Users/huangiris/trans_output/addbizability.js-cd61a5e90d921af4af7db6ff193f45df-output.json",
+		"/Users/huangiris/trans_output/approvalprocess.js-output.json",
+		"/Users/huangiris/trans_output/index.jsx-output.json",
+		"/Users/huangiris/trans_output/preview.js-output.json",
+		"/Users/huangiris/trans_output/vstep.js-output.json",
+		"/Users/huangiris/trans_output/field-wrapper.js-output.json",
+		"/Users/huangiris/trans_output/model.js-output.json",
+		"/Users/huangiris/trans_output/monitor.js-output.json",
+		"/Users/huangiris/trans_output/noticePage.jsx-output.json",
+		"/Users/huangiris/trans_output/api.js-output.json",
+		"/Users/huangiris/trans_output/activityused.js-output.json",
+		"/Users/huangiris/trans_output/date.js-output.json",
+		"/Users/huangiris/trans_output/publishmerge.js-output.json",
+		"/Users/huangiris/trans_output/chooseapp.js-output.json",
+		"/Users/huangiris/trans_output/abilityprocess.js-output.json",
+		"/Users/huangiris/trans_output/tools.jsx-output.json",
+		"/Users/huangiris/WBworkplace/lattice2-front-copy/src/admin/tools.jsx",
+		"/Users/huangiris/trans_output/component.jsx-output.json",
+		"/Users/huangiris/trans_output/burybupie.js-output.json",
+		"/Users/huangiris/trans_output/build.js-output.json",
+		"/Users/huangiris/trans_output/webpack.dev.js-output.json",
+		"/Users/huangiris/trans_output/webpack.prod.js-output.json",
+		"/Users/huangiris/trans_output/app.js-output.json"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"chardet",
+			")\n",
+			"匹配模式，连续中文"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "io/file_reducer.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1181,
+								1181
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 57.0,
+						"translation.y": 465.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1277,
+								1277
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 32.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "conf/config.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 875,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								302,
+								302
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 168.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "transpy.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 176.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
