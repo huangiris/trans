@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-from conf.config import BASE_PATH, OUTPUT_PATH, SUFFIX, PATTERN
+from conf.config import BASE_PATH, OUTPUT_PATH, SUFFIX, PATTERN, PATTERNPLUS
 from filter.suffix_filter import SuffixFilter
-from io.file_reducer import FileReducer
-from io.file_resolver import FileResolver
-from io.file_traverse import FileTraverse
+from ios.file_reducer import FileReducer
+from ios.file_resolver import FileResolver
+from ios.file_traverse import FileTraverse
 import os
 import codecs
 import json
@@ -20,13 +20,13 @@ def export_json():
     dict_map = {}
 
     for file_path in file_list:
-        resolve = FileResolver(file_path, OUTPUT_PATH, PATTERN)
+        resolve = FileResolver(file_path, OUTPUT_PATH, PATTERN, PATTERNPLUS)
         ret = resolve.resolve()
         if ret:
             dict_map.update(ret)
     print dict_map
     f = codecs.open(os.path.join(OUTPUT_PATH, 'lang-output.js'), 'w',
-                encoding="utf-8")
+                    encoding="utf-8")
     f.write(json.dumps(dict_map, encoding='utf-8', ensure_ascii=False, indent=4))
     f.close()
 
@@ -37,6 +37,7 @@ def patch_file():
     """
     reducer = FileReducer(OUTPUT_PATH)
     reducer.patchAll()
+
 
 def clean_backup():
     """
@@ -50,7 +51,8 @@ def clean_backup():
 
 
 if __name__ == '__main__':
-    print 'hello world'
+    print '程序开始'
     export_json()
     patch_file()
-    #clean_backup()
+    # clean_backup()
+    print '程序结束'
