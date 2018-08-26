@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-from conf.config import BASE_PATH, OUTPUT_PATH, SUFFIX, PATTERN, PATTERNPLUS
+from conf.config import BASE_PATH, OUTPUT_PATH, SUFFIX
 from filter.suffix_filter import SuffixFilter
 from ios.file_reducer import FileReducer
-from ios.file_resolver import FileResolver
 from ios.file_traverse import FileTraverse
 import os
 import codecs
 import json
+
+from ios.resolver_factory import ResolverFactory
 
 
 def export_json():
@@ -20,10 +21,11 @@ def export_json():
     dict_map = {}
 
     for file_path in file_list:
-        resolve = FileResolver(file_path, OUTPUT_PATH, PATTERN, PATTERNPLUS)
-        ret = resolve.resolve()
-        if ret:
-            dict_map.update(ret)
+        resolve = ResolverFactory.create_resolver(file_path)
+        if resolve:
+            ret = resolve.resolve()
+            if ret:
+                dict_map.update(ret)
     print dict_map
     f = codecs.open(os.path.join(OUTPUT_PATH, 'lang-output.js'), 'w',
                     encoding="utf-8")
@@ -53,6 +55,6 @@ def clean_backup():
 if __name__ == '__main__':
     print '程序开始'
     export_json()
-    patch_file()
+    # patch_file()
     # clean_backup()
     print '程序结束'

@@ -1,21 +1,20 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
+from ios.resolver import Resolver
 import chardet
 import json
-import uuid
 import codecs
 from collections import OrderedDict
 import hashlib
 
 import os
 import re
-
 from utils.md5 import get_file_md5
 
 
-# 将源文件找到翻译文字并导出json
-class FileResolver:
+class JavaResolver(Resolver):
     def __init__(self, file_path, output_path, pattern, pattern_plus):
+        super(JavaResolver, self).__init__()
         self.path = file_path
         self.output_path = output_path
         self.pattern = pattern
@@ -23,7 +22,6 @@ class FileResolver:
 
     def transform_simple(self, origin):
         return '{trans[\'' + origin + '\']}'
-
 
     # 从原始的文字转换成要的语言串
     def transform(self, origin, text, start, end, lines, seq):
@@ -117,7 +115,7 @@ class FileResolver:
             return
         data = {}
         # dict_map 保存找到的中文串
-        dict_map = {};
+        dict_map = {}
         sort_order_data = ['text', 'start', 'end', 'origin', 'trans', 'auto']
 
         for seq in xrange(len(unicode_lines)):
@@ -173,7 +171,6 @@ class FileResolver:
                             sorted(item_data.iteritems(), key=lambda (k, v): sort_order_data.index(k)))
                         data[seq].append(data_ordered)
 
-
         ret = {
             'path': unicode(self.path),
             'file_name': file_name,
@@ -204,3 +201,4 @@ class FileResolver:
             if i_start <= start <= i_end or i_start <= end <= i_end:
                 return True
         return False
+

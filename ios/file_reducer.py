@@ -22,7 +22,7 @@ class FileReducer:
         path = d[u'path']
         encoding = d[u'encoding']
         data = d[u'data']
-        # type: data: dict
+        # type: data
         md5 = d[u'md5']
         print file_name
         print path

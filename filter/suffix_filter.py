@@ -3,6 +3,7 @@
 
 from filter import Filter
 
+
 # 后缀名过滤器 获得特定后缀名的文件
 class SuffixFilter(Filter):
     def __init__(self, suffixes):
