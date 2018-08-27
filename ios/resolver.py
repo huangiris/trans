@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# abc 用于实现抽象类
+
 from abc import ABCMeta, abstractmethod
 
 
-# 过滤器
-class Filter:
+# 解析器
+class Resolver:
     __metaclass__ = ABCMeta
 
     def __init__(self): pass
 
+    # 解析器，将源文件解析成json
     @abstractmethod
-    def filter(self, file_name): pass
+    def resolve(self): pass
