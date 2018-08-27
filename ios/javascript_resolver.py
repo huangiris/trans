@@ -137,7 +137,7 @@ class JavaScriptResolver(Resolver):
                         'auto': ''
                     }
                     # 保存中文串
-                    dict_map[unicode_lines[seq][item[0]:item[1]][1:-1]] = unicode_lines[seq][item[0]:item[1]][1:-1];
+                    dict_map[unicode_lines[seq][item[0]:item[1]][1:-1]] = unicode_lines[seq][item[0]:item[1]][1:-1]
                     # 排序字典
                     data_ordered = OrderedDict(
                         sorted(item_data.iteritems(), key=lambda (k, v): sort_order_data.index(k)))
@@ -165,7 +165,7 @@ class JavaScriptResolver(Resolver):
                             'auto': ''
                         }
                         # 保存中文串
-                        dict_map[unicode_lines[seq][item[0]:item[1]][1:-1]] = unicode_lines[seq][item[0]:item[1]][1:-1];
+                        dict_map[unicode_lines[seq][item[0]:item[1]]] = unicode_lines[seq][item[0]:item[1]]
                         # 排序字典
                         data_ordered = OrderedDict(
                             sorted(item_data.iteritems(), key=lambda (k, v): sort_order_data.index(k)))
