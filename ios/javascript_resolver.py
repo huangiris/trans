@@ -112,7 +112,11 @@ class JavaScriptResolver(Resolver):
         except UnicodeDecodeError as e:
             print('fail to decode file: ', file_name)
             print('except: ', e)
-            return
+            return {}
+        except TypeError as e:
+            print('fail to decode file: ', file_name)
+            print('except: ', e)
+            return {}
         data = {}
         # dict_map 保存找到的中文串
         dict_map = {}
