@@ -13,8 +13,8 @@ else:
     home_path = os.environ['HOME']
 
 # 以下是主要的配置
-# BASE_PATH = unicode('/Users/huangiris/WBworkplace/lattice-mai-front-copy/src/')  # 基础路径，需要提取文件的路径
-BASE_PATH = unicode(home_path + os.sep + 'trans')  # 基础路径，需要提取文件的路径
+BASE_PATH = unicode('/Users/huangiris/WBworkplace/lattice-mai-front-copy/src/')  # 基础路径，需要提取文件的路径
+#BASE_PATH = unicode(home_path + os.sep + 'trans')  # 基础路径，需要提取文件的路径
 
 OUTPUT_PATH = unicode(home_path + os.sep + 'trans_output')  # json输出路径，不要和上面的路径重合了
 
