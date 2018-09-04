@@ -25,72 +25,7 @@ class JavaResolver(Resolver):
 
     # 从原始的文字转换成要的语言串
     def transform(self, origin, text, start, end, lines, seq):
-        st = start - 1
-        ch = text[start - 1]
-        flag = self.is_in_tag(origin, text, start, end, lines, seq)
-        st = start - 1
-        while True:
-            if st <= -1:
-                break
-            ch = text[st]
-            if ch != ' ':
-                break
-            else:
-                st = st - 1
-
-        if '=' == ch and flag:
-            if st - 1 > 0 and text[st - 1] == '=':
-                return 'trans[\'' + origin[1:-1] + '\']'
-            else:
-                return '{trans[\'' + origin[1:-1] + '\']}'
-        else:
-            return 'trans[\'' + origin[1:-1] + '\']'
-
-    # 找到的字符串是否在标签内
-    def is_in_tag(self, origin, text, start, end, lines, seq):
-        flag = False
-        c_seq = seq
-        c_index = end
-        while True:
-            if c_seq >= len(lines):
-                break
-            c_line = lines[c_seq]
-            if c_index >= len(c_line):
-                c_index = 0
-                c_seq += 1
-                continue
-            ch = c_line[c_index]
-            if ch == '>':
-                if c_index - 1 >= 0 and c_line[c_index - 1] == '=':
-                    pass
-                else:
-                    flag = True
-                    break
-            if ch == '<':
-                break
-            c_index += 1
-        if flag:
-            return flag
-        c_seq = seq
-        c_index = start - 1
-        while True:
-            if c_seq < 0:
-                break
-            c_line = lines[c_seq]
-            if c_index < 0:
-                c_seq -= 1
-                if c_seq >= 0:
-                    c_index = len(lines[c_seq]) - 1
-                continue
-            ch = c_line[c_index]
-            if ch == '<':
-                flag = True
-                break
-            if ch == '>':
-                break
-            c_index -= 1
-
-        return flag
+        return 'trans[\'' + origin[1:-1] + '\']'
 
     # 该行是否是注释
     def is_comment(self, text):
@@ -142,34 +77,6 @@ class JavaResolver(Resolver):
                     data_ordered = OrderedDict(
                         sorted(item_data.iteritems(), key=lambda (k, v): sort_order_data.index(k)))
                     data[seq].append(data_ordered)
-
-            # 匹配第二个正则表达式
-            # print 'second'
-            m = re.finditer(self.pattern_plus, unicode_lines[seq])
-            m_list = [i.span() for i in m]
-            if len(m_list) > 0:
-                if seq not in data:
-                    data[seq] = []
-                for item in m_list:
-                    start = item[0]
-                    end = item[1]
-                    if not self.is_item_include(start, end, data[seq]):
-                        # print item
-                        # print unicode_lines[seq][item[0]:item[1]]
-                        item_data = {
-                            'text': unicode_lines[seq],
-                            'start': item[0],
-                            'end': item[1],
-                            'origin': unicode_lines[seq][item[0]:item[1]],
-                            'trans': self.transform_simple((unicode_lines[seq][item[0]:item[1]])),
-                            'auto': ''
-                        }
-                        # 保存中文串
-                        dict_map[unicode_lines[seq][item[0]:item[1]][1:-1]] = unicode_lines[seq][item[0]:item[1]][1:-1];
-                        # 排序字典
-                        data_ordered = OrderedDict(
-                            sorted(item_data.iteritems(), key=lambda (k, v): sort_order_data.index(k)))
-                        data[seq].append(data_ordered)
 
         ret = {
             'path': unicode(self.path),
