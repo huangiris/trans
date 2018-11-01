@@ -19,7 +19,7 @@ BASE_PATH = unicode(home_path + os.sep + 'trans')  # 基础路径，需要提取
 OUTPUT_PATH = unicode(home_path + os.sep + 'trans_output')  # json输出路径，不要和上面的路径重合了
 
 # 支持 java vm js jsx
-SUFFIX = ['java']  # 要翻译文件后缀名
+SUFFIX = ['js', 'jsx']  # 要翻译文件后缀名
 
 # PATTERN = u"[\u4e00-\u9fa5]+"  # 匹配模式，连续中文
 # PATTERN = u"[\u4e00-\u9fa5][a-zA-Z0-9\u4e00-\u9fa5]*[\u4e00-\u9fa5]"  # 匹配模式，连续中文

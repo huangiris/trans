@@ -8,6 +8,7 @@ from ios.file_traverse import FileTraverse
 import os
 import codecs
 import json
+import shutil
 
 from ios.resolver_factory import ResolverFactory
 
@@ -22,10 +23,14 @@ def export_json():
 
     for file_path in file_list:
         resolve = ResolverFactory.create_resolver(file_path)
-        if resolve:
-            ret = resolve.resolve()
-            if ret:
-                dict_map.update(ret)
+        try:
+            if resolve:
+                ret = resolve.resolve()
+                if ret:
+                    dict_map.update(ret)
+        except Exception as e:
+            print "fail to resolve file: ", file_path
+
     print dict_map
     f = codecs.open(os.path.join(OUTPUT_PATH, 'lang-output.js'), 'w',
                     encoding="utf-8")
@@ -41,6 +46,15 @@ def patch_file():
     reducer.patchAll()
 
 
+def changeFileSuffix():
+    t = FileTraverse(SuffixFilter(["vm"]))
+    file_list = t.traverse(BASE_PATH)
+    for file_path in file_list:
+        print file_path
+        backup = file_path + '.backup.js'
+        shutil.copy(file_path, backup)  # 备份文件
+
+
 def clean_backup():
     """
       将备份文件清理
@@ -54,6 +68,7 @@ def clean_backup():
 
 if __name__ == '__main__':
     print '程序开始'
+    # changeFileSuffix()
     export_json()
     # patch_file()
     # clean_backup()

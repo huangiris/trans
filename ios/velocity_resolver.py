@@ -102,13 +102,14 @@ class VelocityResolver(Resolver):
     # 解析器，将源文件解析成json
     def resolve(self):
         file_name = unicode(os.path.basename(self.path))
+        print file_name
         f = open(self.path)
         code = chardet.detect(f.read())
         f.seek(0, 0)
         lines = f.readlines()
         f.close()
         try:
-            unicode_lines = map(lambda s: s.decode(code['encoding']), lines)
+            unicode_lines = map(lambda s: s.decode('utf-8'), lines)
         except UnicodeDecodeError as e:
             print('fail to decode file: ', file_name)
             print('except: ', e)

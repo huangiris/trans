@@ -17,12 +17,12 @@ class ResolverFactory:
     @staticmethod
     def create_resolver(path):
         resolver = None
-        if path.endswith('js') or path.endswith('jsx'):
+        if path.endswith('backup.js'):
+            resolver = VelocityResolver(path, OUTPUT_PATH, PATTERN, PATTERNPLUS)
+        elif path.endswith('js') or path.endswith('jsx'):
             resolver = JavaScriptResolver(path, OUTPUT_PATH, PATTERN, PATTERNPLUS)
         elif path.endswith('java'):
             resolver = JavaResolver(path, OUTPUT_PATH, PATTERN, PATTERNPLUS)
-        elif path.endswith('vm'):
-            resolver = VelocityResolver(path, OUTPUT_PATH, PATTERN, PATTERNPLUS)
         return resolver
 
 

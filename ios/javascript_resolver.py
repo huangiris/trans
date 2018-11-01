@@ -89,7 +89,6 @@ class JavaScriptResolver(Resolver):
             if ch == '>':
                 break
             c_index -= 1
-
         return flag
 
     # 该行是否是注释
